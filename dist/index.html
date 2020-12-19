@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Gold Rush</title>
+</head>
+
+<body>
+    <div id="play-box">
+        <div id="header">
+            <div id="player1-score" class='score'></div>
+            <div id="player2-score" class='score'></div>
+        </div>
+        <div id="game-div"></div>
+        <div id="footer">
+            <input class="input" type="number" id="r-input" placeholder="Enter number of rows">
+            <input class="input" type="number" id="c-input" placeholder="Enter number of columns">
+            <button id='start'>START</button>
+
+        </div>
+    </div>
+
+    <script id="cell-temp" type="text/x-handlebars-template">
+        {{#if cell.empty}}
+            <div class='cell'></div>
+        {{/if}}
+        {{#if cell.coin}}
+            <div class='cell'><i class="far fa-heart"></i></div>
+        {{/if}}
+        {{#if cell.p1}}
+            <div class='cell'><i id='p1-icon' class="fas fa-circle"></i></div>
+        {{/if}}
+        {{#if cell.p2}}
+            <div class='cell'><i id='p2-icon' class="fas fa-circle"></i></div>
+        {{/if}}
+        {{#if cell.block}}
+            <div class='cell block'></div>
+        {{/if}}
+    </script>
+
+    <script id="score-temp" type="text/x-handlebars-template">
+        <p>{{score}}</p>
+    </script>
+
+    <script src='/handlebars/dist/handlebars.js'></script>
+    <script src='/jquery/dist/jquery.js'></script>
+    <script src='renderer.js'></script>
+    <script src='matrix.js'></script>
+    <script src='goldRush.js'></script>
+    <script src='main.js'></script>
+</body>
+
+</html>

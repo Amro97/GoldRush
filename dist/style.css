@@ -1,0 +1,106 @@
+#play-box{
+    background-color: white;
+    height: 600px;
+    width: 90%;
+    border-style: solid;
+    display: grid;
+    grid-template-areas: 
+    'h'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'g'
+    'f';
+}
+
+* {
+    font-family: 'Chelsea Market', cursive;
+}
+
+.score{
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#player2-score{
+    grid-area: p2;
+    background-color: blue;
+}
+
+#player1-score{
+    grid-area: p1;
+    background-color: red;
+}
+
+#footer{
+    grid-area: f;
+    display: grid;
+    grid-template-areas: 
+    'ir ic s s s s s';
+}
+
+#r-input{
+    grid-area: ir;
+}
+
+#c-input{
+    grid-area: ic;
+}
+
+#start{
+    font-size: 90%;
+    background-color: limegreen;
+    grid-area: s;
+}
+
+input{
+    padding-left: 10%;
+    font-size: 90%;
+    background-color:cyan;
+}
+
+#game-div{
+    grid-area: g;
+}
+
+.cell{
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    background-color:grey;
+    text-align: center;
+}
+
+i{
+    margin-top: 10%;
+}
+
+.far{
+    color: rgb(5, 80, 8);
+}
+
+.block{
+    background-color: yellow;
+}
+
+#p1-icon{
+    color: red;
+}
+
+#p2-icon{
+    color: blue;
+}
